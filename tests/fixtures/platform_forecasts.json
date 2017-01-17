@@ -1,0 +1,16 @@
+[
+  {
+    "id": "9318fe5c-2ea8-4c5c-b930-4ae81a89776f",
+    "initTime": "2014-09-01T00:00:00Z",
+    "frames": "/forecasts/9318fe5c-2ea8-4c5c-b930-4ae81a89776f/frames",
+    "product": "/products/7d8f1c29-35cd-4028-b034-509fcf48cdf0",
+    "status": "INCOMPLETE"
+  },
+  {
+    "id": "92267afc-1e72-4408-a94b-62b40881ea4e",
+    "initTime": "2014-09-01T12:00:00Z",
+    "frames": "/forecasts/92267afc-1e72-4408-a94b-62b40881ea4e/frames",
+    "product": "/products/7d8f1c29-35cd-4028-b034-509fcf48cdf0",
+    "status": "COMPLETE"
+  }
+]

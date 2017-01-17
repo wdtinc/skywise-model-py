@@ -1,0 +1,282 @@
+[
+  {
+    "styles": "/products/17083b4a-e9fe-11e4-b02c-1681e6b88ec1/styles",
+    "aggregationPeriodInMinutes": 60,
+    "contentType": "solar-radiation",
+    "name": "skywise-1hr-solar-radiation-forecast",
+    "frames": null,
+    "forecasts": "/products/17083b4a-e9fe-11e4-b02c-1681e6b88ec1/forecasts",
+    "source": "wrf",
+    "startTime": "2016-03-05T21:00:00Z",
+    "coverage": {
+      "geometry": {"type": "MultiPolygon", "coordinates": [[[[-104.2161537592, 60.9557535603], [-95.8027248773, 60.9557535603], [-87.9320978588, 60.6241075283], [-75.0405536043, 59.3321155469], [-67.3056270517, 58.0608644933], [-61.199106089, 56.7425167809], [-54.9568846605, 55.0657349156], [-47.6388335043, 52.5469034681], [-53.8782556326, 45.4809729476], [-60.1204770611, 35.7924433285], [-65.6841961603, 24.1284205146], [-69.8965092017, 12.1804185903], [-76.3850320672, 14.0699959596], [-83.5980808527, 15.503639679], [-96.2182241755, 16.8151008094], [-103.8174502624, 16.8151008094], [-109.5168698275, 16.4225915408], [-122.9073899574, 14.2324543908], [-126.8739561554, 28.2626114982], [-131.352071528, 39.9617098994], [-136.1015878322, 49.0608928823], [-141.2610048342, 56.0964058347], [-133.7988553115, 57.8444392776], [-124.9783250321, 59.3321155469], [-113.9865872994, 60.4904825703], [-104.2161537592, 60.9557535603]]]]},
+      "type": "Feature"
+    },
+    "styleableLayers": [
+      {
+        "attributes": [],
+        "type": "raster",
+        "name": "solar-radiation",
+        "unit": {
+          "description": "Watts per square meter",
+          "label": "W/m^2"
+        }
+      }
+    ],
+    "endTime": "2016-03-12T03:00:00Z",
+    "id": "17083b4a-e9fe-11e4-b02c-1681e6b88ec1",
+    "description": "SkyWise WRF 1-hour solar radiation forecast"
+  },
+  {
+    "styles": "/products/17083c8a-e9fe-11e4-b02c-1681e6b88ec1/styles",
+    "aggregationPeriodInMinutes": 1440,
+    "contentType": "solar-radiation",
+    "name": "skywise-24hr-solar-radiation-forecast",
+    "frames": null,
+    "forecasts": "/products/17083c8a-e9fe-11e4-b02c-1681e6b88ec1/forecasts",
+    "source": "wrf",
+    "startTime": "2016-03-06T00:00:00Z",
+    "coverage": {
+      "geometry": {"type": "MultiPolygon", "coordinates": [[[[-104.2161537592, 60.9557535603], [-95.8027248773, 60.9557535603], [-87.9320978588, 60.6241075283], [-75.0405536043, 59.3321155469], [-67.3056270517, 58.0608644933], [-61.199106089, 56.7425167809], [-54.9568846605, 55.0657349156], [-47.6388335043, 52.5469034681], [-53.8782556326, 45.4809729476], [-60.1204770611, 35.7924433285], [-65.6841961603, 24.1284205146], [-69.8965092017, 12.1804185903], [-76.3850320672, 14.0699959596], [-83.5980808527, 15.503639679], [-96.2182241755, 16.8151008094], [-103.8174502624, 16.8151008094], [-109.5168698275, 16.4225915408], [-122.9073899574, 14.2324543908], [-126.8739561554, 28.2626114982], [-131.352071528, 39.9617098994], [-136.1015878322, 49.0608928823], [-141.2610048342, 56.0964058347], [-133.7988553115, 57.8444392776], [-124.9783250321, 59.3321155469], [-113.9865872994, 60.4904825703], [-104.2161537592, 60.9557535603]]]]},
+      "type": "Feature"
+    },
+    "styleableLayers": [
+      {
+        "attributes": [],
+        "type": "raster",
+        "name": "solar-radiation",
+        "unit": {
+          "description": "Watts per square meter",
+          "label": "W/m^2"
+        }
+      }
+    ],
+    "endTime": "2016-03-12T00:00:00Z",
+    "id": "17083c8a-e9fe-11e4-b02c-1681e6b88ec1",
+    "description": "SkyWise WRF 24-hour solar radiation forecast"
+  },
+  {
+    "styles": "/products/170835d2-e9fe-11e4-b02c-1681e6b88ec1/styles",
+    "aggregationPeriodInMinutes": 60,
+    "contentType": "precipitation",
+    "name": "weatherops-1hr-precipitation-forecast",
+    "frames": null,
+    "forecasts": "/products/170835d2-e9fe-11e4-b02c-1681e6b88ec1/forecasts",
+    "source": "weatherops",
+    "startTime": "2016-03-07T17:54:02Z",
+    "coverage": {
+      "geometry": {"type": "MultiPolygon", "coordinates": [[[[-179.5, -89.5], [-179.5, 89.5], [179.5, 89.5], [179.5, -89.5], [-179.5, -89.5]]]]},
+      "type": "Feature"
+    },
+    "styleableLayers": [
+      {
+        "attributes": [],
+        "type": "raster",
+        "name": "precipitation",
+        "unit": {
+          "description": "millimeters",
+          "label": "mm"
+        }
+      }
+    ],
+    "endTime": "2016-03-07T17:54:02Z",
+    "id": "170835d2-e9fe-11e4-b02c-1681e6b88ec1",
+    "description": "WeatherOps 1-hour quantitative precipitation forecast"
+  },
+  {
+    "styles": "/products/17082fec-e9fe-11e4-b02c-1681e6b88ec1/styles",
+    "aggregationPeriodInMinutes": 1440,
+    "contentType": "high-temperature",
+    "name": "weatherops-24hr-high-temperature-forecast",
+    "frames": null,
+    "forecasts": "/products/17082fec-e9fe-11e4-b02c-1681e6b88ec1/forecasts",
+    "source": "weatherops",
+    "startTime": "2016-03-07T17:54:02Z",
+    "coverage": {
+      "geometry": {"type": "MultiPolygon", "coordinates": [[[[-179.5, -89.5], [-179.5, 89.5], [179.5, 89.5], [179.5, -89.5], [-179.5, -89.5]]]]},
+      "type": "Feature"
+    },
+    "styleableLayers": [
+      {
+        "attributes": [],
+        "type": "raster",
+        "name": "temperature",
+        "unit": {
+          "description": "degrees Celsius",
+          "label": "°C"
+        }
+      }
+    ],
+    "endTime": "2016-03-07T17:54:02Z",
+    "id": "17082fec-e9fe-11e4-b02c-1681e6b88ec1",
+    "description": "WeatherOps 24-hour high temperature forecast"
+  },
+  {
+    "styles": "/products/17083122-e9fe-11e4-b02c-1681e6b88ec1/styles",
+    "aggregationPeriodInMinutes": 1440,
+    "contentType": "low-temperature",
+    "name": "weatherops-24hr-low-temperature-forecast",
+    "frames": null,
+    "forecasts": "/products/17083122-e9fe-11e4-b02c-1681e6b88ec1/forecasts",
+    "source": "weatherops",
+    "startTime": "2016-03-07T17:54:02Z",
+    "coverage": {
+      "geometry": {"type": "MultiPolygon", "coordinates": [[[[-179.5, -89.5], [-179.5, 89.5], [179.5, 89.5], [179.5, -89.5], [-179.5, -89.5]]]]},
+      "type": "Feature"
+    },
+    "styleableLayers": [
+      {
+        "attributes": [],
+        "type": "raster",
+        "name": "temperature",
+        "unit": {
+          "description": "degrees Celsius",
+          "label": "°C"
+        }
+      }
+    ],
+    "endTime": "2016-03-07T17:54:02Z",
+    "id": "17083122-e9fe-11e4-b02c-1681e6b88ec1",
+    "description": "WeatherOps 24-hour low temperature forecast"
+  },
+  {
+    "styles": "/products/17083708-e9fe-11e4-b02c-1681e6b88ec1/styles",
+    "aggregationPeriodInMinutes": 1440,
+    "contentType": "precipitation",
+    "name": "weatherops-24hr-precipitation-forecast",
+    "frames": null,
+    "forecasts": "/products/17083708-e9fe-11e4-b02c-1681e6b88ec1/forecasts",
+    "source": "weatherops",
+    "startTime": "2016-03-07T17:54:02Z",
+    "coverage": {
+      "geometry": {"type": "MultiPolygon", "coordinates": [[[[-179.5, -89.5], [-179.5, 89.5], [179.5, 89.5], [179.5, -89.5], [-179.5, -89.5]]]]},
+      "type": "Feature"
+    },
+    "styleableLayers": [
+      {
+        "attributes": [],
+        "type": "raster",
+        "name": "precipitation",
+        "unit": {
+          "description": "millimeters",
+          "label": "mm"
+        }
+      }
+    ],
+    "endTime": "2016-03-07T17:54:02Z",
+    "id": "17083708-e9fe-11e4-b02c-1681e6b88ec1",
+    "description": "WeatherOps 24-hour quantitative precipitation forecast"
+  },
+  {
+    "styles": "/products/82025040-d9b1-11e5-b5d2-0a1d41d68578/styles",
+    "aggregationPeriodInMinutes": 60,
+    "contentType": "precipitation",
+    "name": "weatherops-superconus-1hr-precipitation-forecast",
+    "frames": null,
+    "forecasts": "/products/82025040-d9b1-11e5-b5d2-0a1d41d68578/forecasts",
+    "source": "weatherops",
+    "startTime": "2016-03-07T17:54:02Z",
+    "coverage": {
+      "geometry": {"type": "MultiPolygon", "coordinates": [[[[-140.0, 9.5], [-140.0, 65.5], [-52.0, 65.5], [-52.0, 9.5], [-140.0, 9.5]]]]},
+      "type": "Feature"
+    },
+    "styleableLayers": [
+      {
+        "attributes": [],
+        "type": "raster",
+        "name": "precipitation",
+        "unit": {
+          "description": "millimeters",
+          "label": "mm"
+        }
+      }
+    ],
+    "endTime": "2016-03-07T17:54:02Z",
+    "id": "82025040-d9b1-11e5-b5d2-0a1d41d68578",
+    "description": "WeatherOps superconus 1-hour quantitative precipitation forecast"
+  },
+  {
+    "styles": "/products/82025c48-d9b1-11e5-b5d2-0a1d41d68578/styles",
+    "aggregationPeriodInMinutes": 1440,
+    "contentType": "high-temperature",
+    "name": "weatherops-superconus-24hr-high-temperature-forecast",
+    "frames": null,
+    "forecasts": "/products/82025c48-d9b1-11e5-b5d2-0a1d41d68578/forecasts",
+    "source": "weatherops",
+    "startTime": "2016-03-07T17:54:02Z",
+    "coverage": {
+      "geometry": {"type": "MultiPolygon", "coordinates": [[[[-140.0, 9.5], [-140.0, 65.5], [-52.0, 65.5], [-52.0, 9.5], [-140.0, 9.5]]]]},
+      "type": "Feature"
+    },
+    "styleableLayers": [
+      {
+        "attributes": [],
+        "type": "raster",
+        "name": "temperature",
+        "unit": {
+          "description": "degrees Celsius",
+          "label": "°C"
+        }
+      }
+    ],
+    "endTime": "2016-03-07T17:54:02Z",
+    "id": "82025c48-d9b1-11e5-b5d2-0a1d41d68578",
+    "description": "WeatherOps superconus 24-hour high temperature forecast"
+  },
+  {
+    "styles": "/products/82025a54-d9b1-11e5-b5d2-0a1d41d68578/styles",
+    "aggregationPeriodInMinutes": 1440,
+    "contentType": "low-temperature",
+    "name": "weatherops-superconus-24hr-low-temperature-forecast",
+    "frames": null,
+    "forecasts": "/products/82025a54-d9b1-11e5-b5d2-0a1d41d68578/forecasts",
+    "source": "weatherops",
+    "startTime": "2016-03-07T17:54:02Z",
+    "coverage": {
+      "geometry": {"type": "MultiPolygon", "coordinates": [[[[-140.0, 9.5], [-140.0, 65.5], [-52.0, 65.5], [-52.0, 9.5], [-140.0, 9.5]]]]},
+      "type": "Feature"
+    },
+    "styleableLayers": [
+      {
+        "attributes": [],
+        "type": "raster",
+        "name": "temperature",
+        "unit": {
+          "description": "degrees Celsius",
+          "label": "°C"
+        }
+      }
+    ],
+    "endTime": "2016-03-07T17:54:02Z",
+    "id": "82025a54-d9b1-11e5-b5d2-0a1d41d68578",
+    "description": "WeatherOps superconus 24-hour low temperature forecast"
+  },
+  {
+    "styles": "/products/820257ca-d9b1-11e5-b5d2-0a1d41d68578/styles",
+    "aggregationPeriodInMinutes": 1440,
+    "contentType": "precipitation",
+    "name": "weatherops-superconus-24hr-precipitation-forecast",
+    "frames": null,
+    "forecasts": "/products/820257ca-d9b1-11e5-b5d2-0a1d41d68578/forecasts",
+    "source": "weatherops",
+    "startTime": "2016-03-07T17:54:02Z",
+    "coverage": {
+      "geometry": {"type": "MultiPolygon", "coordinates": [[[[-140.0, 9.5], [-140.0, 65.5], [-52.0, 65.5], [-52.0, 9.5], [-140.0, 9.5]]]]},
+      "type": "Feature"
+    },
+    "styleableLayers": [
+      {
+        "attributes": [],
+        "type": "raster",
+        "name": "precipitation",
+        "unit": {
+          "description": "millimeters",
+          "label": "mm"
+        }
+      }
+    ],
+    "endTime": "2016-03-07T17:54:02Z",
+    "id": "820257ca-d9b1-11e5-b5d2-0a1d41d68578",
+    "description": "WeatherOps superconus 24-hour quantitative precipitation forecast"
+  }
+]

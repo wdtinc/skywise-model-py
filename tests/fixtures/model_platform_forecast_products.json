@@ -1,0 +1,21 @@
+[{
+	"id": "model-variable-uuid-1",
+	"name": "qpf6",
+	"description": "6-hour precipitation in millimeters.",
+	"model_id": "tropical-gfe-uuid",
+	"platform_forecast_product_id": "qpf6-platform-product-uuid"
+},
+{
+	"id": "model-variable-uuid-2",
+	"name": "wave-height",
+	"description": "Wave height in feet.",
+	"model_id": "tropical-gfe-uuid",
+	"platform_forecast_product_id": "wave-height-platform-product-uuid"
+},
+{
+	"id": "model-variable-uuid-3",
+	"name": "wind-gust",
+	"description": "Wind gust speed in knots.",
+	"model_id": "tropical-gfe-uuid",
+	"platform_forecast_product_id": "wind-gust-platform-product-uuid"
+}]

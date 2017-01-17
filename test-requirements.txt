@@ -1,0 +1,5 @@
+skywise-rest-client
+skywise-platform
+nose
+requests-mock
+requests

@@ -1,0 +1,39 @@
+{
+	"series": [
+		{
+			"validTime": "2015-05-05T00:00:00Z",
+			"value": 5.0
+		},
+		{
+			"validTime": "2015-05-06T00:00:00Z",
+			"value": 10.0
+		},
+		{
+			"validTime": "2015-05-07T00:00:00Z",
+			"value": 15.0
+		},
+		{
+			"validTime": "2015-05-08T00:00:00Z",
+			"value": 15.0
+		},
+		{
+			"validTime": "2015-05-09T00:00:00Z",
+			"value": 20.0
+		}
+	],
+	"maximum": {
+        "validTime": "2015-05-09T00:00:00Z",
+        "value": 20.0
+    },
+    "minimum": {
+        "validTime": "2015-05-05T00:00:00Z",
+        "value": 5.0
+    },
+	"unit": {
+        "description": "temperature",
+        "label": "celsius"
+    },
+	"mean": 13.0,
+	"median": 15.0,
+	"mode": 15.0
+}

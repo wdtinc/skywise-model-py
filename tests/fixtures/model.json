@@ -1,0 +1,6 @@
+{
+    "id": "tropical-gfe-uuid",
+    "name": "tropical-gfe",
+    "description": "WeatherOps AWIPS II GFE tropical forecast.",
+    "forecasts": "/models/4a79aeab-84f0-4dde-ae39-a20b4ccee878/forecasts"
+}

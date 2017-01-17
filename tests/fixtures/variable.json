@@ -1,0 +1,10 @@
+{
+    "id": "my-forecast-variable-id",
+    "name": "a-forecast-variable",
+    "description": "A Forecast Variable.",
+    "validTimes": ["2015-05-01T00:00Z", "2015-05-02T00:00Z"],
+    "forecast": "/path/to/this-variables/forecast",
+    "forecast_id": "some-forecast-id",
+    "platform_forecast_product_id": "some-platform-product-id",
+    "platform_forecast_id": "this-platform-forecast-id"
+}
