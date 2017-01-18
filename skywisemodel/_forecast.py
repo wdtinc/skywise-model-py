@@ -14,33 +14,33 @@ class Forecast(ModelApiResource):
         'initTime': datetime_to_str,
         'limit': int,
         'sort': Any('asc', 'desc'),
-        'status': Any(str, unicode)
+        'status': unicode
     })
 
     _deserialize = Schema({
-        'id': Any(str, unicode),
-        'model': Any(str, unicode),
+        'id': Any(None, unicode),
+        'model': unicode,
         'createTime': datetime,
         'initTime': datetime,
-        'variables': Any(str, unicode),
-        'status': Any(str, unicode),
-        'model_id': Any(str, unicode)
+        'variables': unicode,
+        'status': unicode,
+        'model_id': unicode
     })
 
     _serialize = Schema({
-        'id': Any(None, str, unicode),
-        'model_id': Any(str, unicode),
+        'id': Any(None, unicode),
+        'model_id': unicode,
         'initTime': datetime_to_str,
-        'status': Any(str, unicode)
+        'status': unicode
     })
 
     def get_variables(self, **kwargs):
         return Variable.find(forecast_id=self.id, **kwargs)
 
-    def add_variable(self, platform_forecast):
+    def add_variable(self, platform_product_id, platform_forecast_id):
         variable = Variable()
         variable.forecast_id = self.id
-        variable.platform_product_id = platform_forecast.product.id
-        variable.platform_forecast_id = platform_forecast.id
+        variable.platform_forecast_product_id = platform_product_id
+        variable.platform_forecast_id = platform_forecast_id
         variable.save()
         return variable
