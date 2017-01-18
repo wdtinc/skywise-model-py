@@ -1,0 +1,6 @@
+{
+    "id": "new-subscription-id",
+    "model_id": "tropical-gfe-uuid",
+    "event": "FORECAST_COMPLETE",
+    "subscriber_email": "foo@wdtinc.com"
+}
