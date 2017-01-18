@@ -2,6 +2,7 @@ from voluptuous import Any, Schema
 
 from . import ModelApiResource
 from ._forecast import Forecast
+from ._subscription import Subscription
 
 
 class Model(ModelApiResource):
@@ -42,6 +43,14 @@ class Model(ModelApiResource):
         p.platform_product_id = forecast_product.id
         p.model_id = self.id
         p.save()
+
+    def subscribe(self, event, subscriber_email):
+        subscription = Subscription()
+        subscription.model_id = self.id
+        subscription.event = event
+        subscription.subscriber_email = subscriber_email
+        subscription.save()
+        return subscription
 
 
 class _ModelPlatformForecastProduct(ModelApiResource):
