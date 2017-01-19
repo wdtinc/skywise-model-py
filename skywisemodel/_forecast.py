@@ -5,20 +5,20 @@ from ._variable import Variable
 
 
 _forecast_deserialize = Schema({
-    'id': Any(None, unicode),
-    'model': unicode,
+    'id': Any(None, str, unicode),
+    'model': Any(str, unicode),
     'createTime': datetime,
     'initTime': datetime,
-    'variables': unicode,
-    'status': unicode,
-    'model_id': unicode
+    'variables': Any(str, unicode),
+    'status': Any(str, unicode),
+    'model_id': Any(str, unicode)
 })
 
 _forecast_serialize = Schema({
-    'id': Any(None, unicode),
-    'model_id': unicode,
+    'id': Any(None, str, unicode),
+    'model_id': Any(str, unicode),
     'initTime': datetime_to_str,
-    'status': unicode
+    'status': Any(str, unicode)
 })
 
 
@@ -59,8 +59,16 @@ class Forecast(ModelApiResource, _ForecastMixin):
             return _ForecastById.find(id_)
         return super(Forecast, cls).find(**kwargs)
 
+    def save(self, **kwargs):
+        if self.id:
+            forecast = _ForecastById()
+            forecast._data = self._data
+            forecast.save(**kwargs)
+            return forecast.id
+        return super(Forecast, self).save(**kwargs)
 
-class _ForecastById(Forecast, _ForecastMixin):
+
+class _ForecastById(ModelApiResource, _ForecastMixin):
 
     _path = '/forecasts'
 
