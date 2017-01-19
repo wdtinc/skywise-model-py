@@ -1,24 +1,28 @@
 from voluptuous import Any, Schema
 from . import ModelApiResource
 
+_subscription_deserialize = Schema({
+    'id': Any(None, str, unicode),
+    'model_id': Any(str, unicode),
+    'event': Any(str, unicode),
+    'subscriber_email': Any(str, unicode)
+})
+
+_subscription_serialize = Schema({
+    'id': Any(None, str, unicode),
+    'model_id': Any(str, unicode),
+    'event': Any(str, unicode),
+    'subscriber_email': Any(str, unicode)
+})
+
 
 class Subscription(ModelApiResource):
 
     _path = '/models/{model_id}/subscriptions'
 
-    _deserialize = Schema({
-        'id': Any(None, str, unicode),
-        'model_id': Any(str, unicode),
-        'event': Any(str, unicode),
-        'subscriber_email': Any(str, unicode)
-    })
+    _deserialize = _subscription_deserialize
 
-    _serialize = Schema({
-        'id': Any(None, str, unicode),
-        'model_id': Any(str, unicode),
-        'event': Any(str, unicode),
-        'subscriber_email': Any(str, unicode)
-    })
+    _serialize = _subscription_serialize
 
     @classmethod
     def find(cls, id_=None, **kwargs):
@@ -27,6 +31,10 @@ class Subscription(ModelApiResource):
         return super(Subscription, cls).find(**kwargs)
 
 
-class _SubscriptionById(Subscription):
+class _SubscriptionById(ModelApiResource):
 
-    _path = '/subscriptions/{subscription_id}'
+    _path = '/subscriptions'
+
+    _deserialize = _subscription_deserialize
+
+    _serialize = _subscription_serialize
