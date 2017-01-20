@@ -71,13 +71,15 @@ class EverythingTest(ModelTest):
             models_json.append(json)
             m = self.model_api_adapter.register_uri('POST', '/models/%s/platform-forecast-products' % json['model_id'],
                                           json=json)
-            self.model.add_forecast_product(product)
+            self.model.add_platform_forecast_product(product.name,
+                                                     product.description,
+                                                     product.id)
             self.assertEqual(len(m.request_history), 1)
 
         # Test Read
         self.model_api_adapter.register_uri('GET', '/models/%s/platform-forecast-products' % self.model.id,
                                   json=models_json)
-        forecast_products = self.model.get_forecast_products()
+        forecast_products = self.model.get_platform_forecast_products()
         self.assertEqual(len(forecast_products), 10)
 
         # Test Update
@@ -157,7 +159,7 @@ class EverythingTest(ModelTest):
         self.model_api_adapter.register_uri('GET', '/models/%s/forecasts/%s' % (self.model.id,
                                                                        forecasts_json[0]['id']),
                                   json=forecasts_json[0])
-        forecast.add_variable(platform_forecast)
+        forecast.add_variable(platform_product.id, platform_forecast.id)
         self.assertEqual(len(m.request_history), 1)
         self.assertEqual(forecast.status, 'COMPLETE')
 

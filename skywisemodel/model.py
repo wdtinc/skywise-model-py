@@ -26,6 +26,9 @@ class Model(ModelApiResource):
     def get_forecasts(self, **kwargs):
         return Forecast.find(model_id=self.id, **kwargs)
 
+    def get_forecast_by_id(self, forecast_id):
+        return Forecast.find(forecast_id)
+
     def create_forecast(self, init_time):
         forecast = Forecast()
         forecast.initTime = init_time
@@ -33,14 +36,14 @@ class Model(ModelApiResource):
         forecast.save()
         return forecast
 
-    def get_forecast_products(self, **kwargs):
+    def get_platform_forecast_products(self, **kwargs):
         return _ModelPlatformForecastProduct.find(model_id=self.id, **kwargs)
 
-    def add_forecast_product(self, forecast_product):
+    def add_platform_forecast_product(self, name, description, platform_forecast_product_id):
         p = _ModelPlatformForecastProduct()
-        p.name = forecast_product.name
-        p.description = forecast_product.description
-        p.platform_product_id = forecast_product.id
+        p.name = name
+        p.description = description
+        p.platform_forecast_product_id = platform_forecast_product_id
         p.model_id = self.id
         p.save()
 
