@@ -1,6 +1,9 @@
+from requests import HTTPError
 from voluptuous import Any, Schema
 
 from . import ModelApiResource
+from .exc import (ModelAlreadyExistsException, ModelNotFound,
+                  ModelPlatformForecastProductAlreadyExists)
 from ._forecast import Forecast
 from ._subscription import Subscription
 
@@ -22,6 +25,26 @@ class Model(ModelApiResource):
         'description': Any(str, unicode),
         'forecasts': Any(str, unicode)
     })
+
+    @classmethod
+    def find(cls, id_=None, **kwargs):
+        if not id_:
+            return super(Model, cls).find(**kwargs)
+
+        try:
+            return super(Model, cls).find(id_)
+        except HTTPError as e:
+            if "model_does_not_exist" in e.response.content:
+                raise ModelNotFound()
+            raise e
+
+    def save(self, **kwargs):
+        try:
+            super(Model, self).save(**kwargs)
+        except HTTPError as e:
+            if "model_already_exists" in e.response.content:
+               raise ModelAlreadyExistsException()
+            raise e
 
     def get_forecasts(self, **kwargs):
         return Forecast.find(model_id=self.id, **kwargs)
@@ -45,7 +68,13 @@ class Model(ModelApiResource):
         p.description = description
         p.platform_forecast_product_id = platform_forecast_product_id
         p.model_id = self.id
-        p.save()
+
+        try:
+            p.save()
+        except HTTPError as e:
+            if 'mpfp_already_exists' in e.response.content:
+                raise ModelPlatformForecastProductAlreadyExists()
+        return p
 
     def subscribe(self, event, subscriber_email):
         subscription = Subscription()
