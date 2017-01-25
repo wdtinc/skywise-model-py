@@ -46,7 +46,7 @@ class Forecast(ModelApiResource, _ForecastMixin):
         'initTime': datetime_to_str,
         'limit': int,
         'sort': Any('asc', 'desc'),
-        'status': unicode
+        'status': Any(str, unicode)
     })
 
     _deserialize = _forecast_deserialize
