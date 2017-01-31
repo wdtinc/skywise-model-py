@@ -24,6 +24,10 @@ class Subscription(ModelApiResource):
 
     _serialize = _subscription_serialize
 
+    _args = Schema({
+        'event': Any(str, unicode)
+    })
+
     @classmethod
     def find(cls, id_=None, **kwargs):
         if id_ is not None:

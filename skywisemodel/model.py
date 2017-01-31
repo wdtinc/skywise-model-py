@@ -84,6 +84,9 @@ class Model(ModelApiResource):
         subscription.save()
         return subscription
 
+    def get_subscriptions(self, **kwargs):
+        return Subscription.find(model_id=self.id, **kwargs)
+
 
 class _ModelPlatformForecastProduct(ModelApiResource):
 
