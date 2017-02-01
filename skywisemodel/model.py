@@ -81,8 +81,9 @@ class Model(ModelApiResource):
         subscription.model_id = self.id
         subscription.event = event
         subscription.subscriber_email = subscriber_email
-        if options is not None:
-            subscription.options = options
+        if options is None:
+            options = {}
+        subscription.options = options
         subscription.save()
         return subscription
 
