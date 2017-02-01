@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/wdtinc/skywise-model-py.svg?branch=master)](https://travis-ci.org/wdtinc/skywise-model-py)
 
 # Overview
-A Python client library for the SkyWise Model API.
+A Python client library for the SkyWise Model API. Currently a WIP.
 
 # Installation
 
