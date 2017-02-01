@@ -76,11 +76,13 @@ class Model(ModelApiResource):
                 raise ModelPlatformForecastProductAlreadyExists()
         return p
 
-    def subscribe(self, event, subscriber_email):
+    def subscribe(self, event, subscriber_email, options=None):
         subscription = Subscription()
         subscription.model_id = self.id
         subscription.event = event
         subscription.subscriber_email = subscriber_email
+        if options is not None:
+            subscription.options = options
         subscription.save()
         return subscription
 
