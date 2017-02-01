@@ -26,8 +26,12 @@ class SubscriptionsTest(ModelTest):
         url = '/models/%s/subscriptions' % self.model.id
         self.model_api_adapter.register_uri('POST', url, json=subscription_json)
 
-        subscription = self.model.subscribe(event, subscriber_email)
+        subscription = self.model.subscribe(event, subscriber_email, options={
+            'option-1': 'foo',
+            'option-2': 1
+        })
         self.assertIsNotNone(subscription.id)
         self.assertEqual(subscription.model_id, self.model.id)
         self.assertEqual(subscription.event, event)
         self.assertEqual(subscription.subscriber_email, subscriber_email)
+        self.assertEqual(len(subscription.options), 2)

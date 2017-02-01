@@ -5,14 +5,16 @@ _subscription_deserialize = Schema({
     'id': Any(None, str, unicode),
     'model_id': Any(str, unicode),
     'event': Any(str, unicode),
-    'subscriber_email': Any(str, unicode)
+    'subscriber_email': Any(str, unicode),
+    'options': dict
 })
 
 _subscription_serialize = Schema({
     'id': Any(None, str, unicode),
     'model_id': Any(str, unicode),
     'event': Any(str, unicode),
-    'subscriber_email': Any(str, unicode)
+    'subscriber_email': Any(str, unicode),
+    'options': dict
 })
 
 
