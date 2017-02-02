@@ -20,4 +20,4 @@ def map_async(skywise_requests, raise_on_error=True):
 
 
 from .model import Model
-from ._forecast import Forecast
+from .forecast import Forecast

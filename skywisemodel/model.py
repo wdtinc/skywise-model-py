@@ -4,7 +4,7 @@ from voluptuous import Any, Schema
 from . import ModelApiResource
 from .exc import (ModelAlreadyExistsException, ModelNotFound,
                   ModelPlatformForecastProductAlreadyExists)
-from ._forecast import Forecast
+from .forecast import Forecast
 from ._subscription import Subscription
 
 
@@ -47,16 +47,22 @@ class Model(ModelApiResource):
             raise e
 
     def get_forecasts(self, **kwargs):
-        return Forecast.find(model_id=self.id, **kwargs)
+        forecasts = Forecast.find(model_id=self.id, **kwargs)
+        for forecast in forecasts:
+            forecast.model = self
+        return forecasts
 
     def get_forecast_by_id(self, forecast_id):
-        return Forecast.find(forecast_id)
+        forecast = Forecast.find(forecast_id)
+        forecast.model = self
+        return forecast
 
     def create_forecast(self, init_time):
         forecast = Forecast()
         forecast.initTime = init_time
         forecast.model_id = self.id
         forecast.save()
+        forecast.model = self
         return forecast
 
     def get_platform_forecast_products(self, **kwargs):

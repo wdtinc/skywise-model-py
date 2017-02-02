@@ -3,6 +3,10 @@ from . import ModelApiResource
 from ._validation import datetime, datetime_to_str
 from ._variable import Variable
 
+STATUS_INITIALIZING = 'INITIALIZING'
+STATUS_INCOMPLETE = 'INCOMPLETE'
+STATUS_COMPLETE = 'COMPLETE'
+STATUS_EXPIRED = 'EXPIRED'
 
 _forecast_deserialize = Schema({
     'id': Any(None, str, unicode),
