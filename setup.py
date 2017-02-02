@@ -3,9 +3,9 @@ from setuptools import setup
 
 setup(
     name='skywise-model',
-    version='0.0.7',
+    version='0.0.9',
     package_data={'': ['README.md']},
-    packages=['skywisemodel'],
+    packages=['skywisemodel', 'skywisemodel.forecast'],
     install_requires=[
         'skywise-rest-client',
         'voluptuous'
