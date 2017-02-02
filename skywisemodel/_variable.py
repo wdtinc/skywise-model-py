@@ -15,7 +15,7 @@ class Variable(ModelApiResource):
         "validTimes": [datetime],
         "forecast": Any(str, unicode),
         'forecast_id': Any(str, unicode),
-        'platform_forecast_product_id': Any(str, unicode),
+        'model_platform_forecast_product_id': Any(str, unicode),
         'platform_forecast_id': Any(str, unicode)
     })
 
@@ -26,7 +26,7 @@ class Variable(ModelApiResource):
         "validTimes": [datetime_to_str],
         "forecast": Any(str, unicode),
         'forecast_id': Any(str, unicode),
-        'platform_forecast_product_id': Any(str, unicode),
+        'model_platform_forecast_product_id': Any(str, unicode),
         'platform_forecast_id': Any(str, unicode)
     })
 
