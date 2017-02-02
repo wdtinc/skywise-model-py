@@ -27,6 +27,7 @@ class Variable(ModelApiResource):
         "forecast": Any(str, unicode),
         'forecast_id': Any(str, unicode),
         'model_platform_forecast_product_id': Any(str, unicode),
+        'platform_forecast_product_id': Any(str, unicode),
         'platform_forecast_id': Any(str, unicode)
     })
 
