@@ -15,14 +15,16 @@ _forecast_deserialize = Schema({
     'initTime': datetime,
     'variables': Any(str, unicode),
     'status': Any(str, unicode),
-    'model_id': Any(str, unicode)
+    'model_id': Any(str, unicode),
+    'expirationTime': datetime
 })
 
 _forecast_serialize = Schema({
     'id': Any(None, str, unicode),
     'model_id': Any(str, unicode),
     'initTime': datetime_to_str,
-    'status': Any(str, unicode)
+    'status': Any(str, unicode),
+    'expirationTime': datetime_to_str
 })
 
 
