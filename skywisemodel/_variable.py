@@ -33,3 +33,8 @@ class Variable(ModelApiResource):
 
     def get_timeseries(self, lat, lon):
         return TimeSeries.find(variable_id=self.id, lat=lat, lon=lon)
+
+    def get_timeseries_async(self, lat, lon):
+        ts = TimeSeries.find_async(variable_id=self.id, lat=lat, lon=lon)
+        ts.tag(variable=self)
+        return ts
