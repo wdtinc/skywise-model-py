@@ -81,3 +81,12 @@ class _ForecastById(ModelApiResource, _ForecastMixin):
     _deserialize = _forecast_deserialize
 
     _serialize = _forecast_serialize
+
+
+class LatestForecast(ModelApiResource, _ForecastMixin):
+
+    _path = '/models/{model_id}/latest-forecast'
+
+    _deserialize = _forecast_deserialize
+
+    _serialize = _forecast_serialize

@@ -4,7 +4,7 @@ from voluptuous import Any, Schema
 from . import ModelApiResource
 from .exc import (ModelAlreadyExistsException, ModelNotFound,
                   ModelPlatformForecastProductAlreadyExists)
-from .forecast import Forecast
+from .forecast import Forecast, LatestForecast
 from ._subscription import Subscription
 
 
@@ -45,6 +45,9 @@ class Model(ModelApiResource):
             if "model_already_exists" in e.response.content:
                raise ModelAlreadyExistsException()
             raise e
+
+    def latest_forecast(self):
+        return LatestForecast.find(model_id=self.id)
 
     def get_forecasts(self, **kwargs):
         forecasts = Forecast.find(model_id=self.id, **kwargs)
