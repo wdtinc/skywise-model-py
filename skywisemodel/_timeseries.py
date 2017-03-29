@@ -10,19 +10,19 @@ class TimeSeries(ModelApiResource):
     _deserialize = Schema({
         'series': [{
             'validTime': datetime,
-            'value': float
+            'value': Any(None, float)
         }],
         'maximum': {
             'validTime': datetime,
-            'value': float
+            'value': Any(None, float)
         },
         'minimum': {
             'validTime': datetime,
-            'value': float
+            'value': Any(None, float)
         },
-        'mean': float,
-        'median': float,
-        'mode': float,
+        'mean': Any(None, float),
+        'median': Any(None, float),
+        'mode': Any(None, float),
         'unit': {
             'description': Any(str, unicode),
             'label': Any(str, unicode)
@@ -32,19 +32,19 @@ class TimeSeries(ModelApiResource):
     _serialize = Schema({
         'series': [{
             'validTime': datetime_to_str,
-            'value': float
+            'value': Any(None, float)
         }],
         'maximum': {
             'validTime': datetime_to_str,
-            'value': float
+            'value': Any(None, float)
         },
         'minimum': {
             'validTime': datetime_to_str,
-            'value': float
+            'value': Any(None, float)
         },
-        'mean': float,
-        'median': float,
-        'mode': float,
+        'mean': Any(None, float),
+        'median': Any(None, float),
+        'mode': Any(None, float),
         'unit': {
             'description': Any(str, unicode),
             'label': Any(str, unicode)
