@@ -10,8 +10,6 @@ setup(
         'skywise-rest-client',
         'voluptuous'
     ],
-
-    # metadata for upload to PyPI
     author='Weather Decision Technologies',
     author_email='jstewart@wdtinc.com',
     description='SkyWise Model API Python Client Library',
