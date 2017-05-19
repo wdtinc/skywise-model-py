@@ -27,7 +27,8 @@ class Subscription(ModelApiResource):
     _serialize = _subscription_serialize
 
     _args = Schema({
-        'event': Any(str, unicode)
+        'event': Any(str, unicode),
+        'subscriber_email': Any(str, unicode)
     })
 
     @classmethod
